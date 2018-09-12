@@ -51,3 +51,12 @@ function resetBoard() {
   [hasPickedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null]
 }
+
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomOrder = Math.floor(Math.random() * 12);
+    card.style.order = randomOrder;
+  });
+
+})();
