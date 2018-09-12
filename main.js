@@ -1,6 +1,10 @@
 let hasPickedCard = false;
 let firstCard, secondCard;
 
+//TO-DO
+//Corregir bugs
+//Crear método resetBoard
+//Crear método shuffle
 
 function flipCard() {
   this.classList.add('flip');
