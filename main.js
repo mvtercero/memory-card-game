@@ -20,7 +20,6 @@ function flipCard() {
     return;
   }
 
-  hasPickedCard = false;
   secondCard = this;
   checkForMatch();
 
@@ -35,6 +34,7 @@ function checkForMatch() {
 function disabledCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
+  resetBoard();
 }
 
 function unflipCards() {
@@ -43,5 +43,11 @@ function unflipCards() {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
     lockBoard = false;
+    resetBoard();
   }, 1500);
+}
+
+function resetBoard() {
+  [hasPickedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null]
 }
