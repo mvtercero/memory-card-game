@@ -14,9 +14,16 @@ function flipCard() {
     hasPickedCard = false;
     secondCard = this;
 
-    //Two cards picked
-    console.log(firstCard.dataset.key)
-    console.log(secondCard.dataset.key)
+    //Ha seleccionado dos cartas?
+    if (firstCard.dataset.key === secondCard.dataset.key) {
+      //Son iguales!
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+    } else {
+      //No son iguales
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+    }
   }
 }
 
