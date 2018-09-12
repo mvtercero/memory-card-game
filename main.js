@@ -1,6 +1,5 @@
 let hasPickedCard = false;
-let firstCard;
-let secondCard;
+let firstCard, secondCard;
 
 
 function flipCard() {
@@ -14,9 +13,11 @@ function flipCard() {
     //segundo click
     hasPickedCard = false;
     secondCard = this;
-  }
 
-  console.log(firstCard, secondCard)
+    //Two cards picked
+    console.log(firstCard.dataset.key)
+    console.log(secondCard.dataset.key)
+  }
 }
 
 let cards = document.querySelectorAll('.memory-card');
