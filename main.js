@@ -1,5 +1,6 @@
 
 const cards = document.querySelectorAll('.memory-card');
+console.log(cards)
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 let hasPickedCard = false;
